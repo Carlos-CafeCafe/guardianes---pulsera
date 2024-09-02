@@ -28,6 +28,8 @@ radio.onReceivedValue(function (name, value) {
         basic.clearScreen()
         if (bandera == 5) {
             alerta = 1
+        } else {
+            alerta = 0
         }
     }
 })
@@ -46,6 +48,7 @@ basic.forever(function () {
         for (let index = 0; index < bandera; index++) {
             music.play(music.tonePlayable(587, music.beat(BeatFraction.Half)), music.PlaybackMode.UntilDone)
             basic.pause(100)
+            basic.clearScreen()
         }
         basic.pause(5000)
     }
